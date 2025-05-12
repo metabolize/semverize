@@ -19,6 +19,15 @@ pep440_to_semver("1.0a2")
 ```
 
 
+```console
+$ semverize 1.0a2
+1.0.0-alpha.2
+
+$ semverize bargle
+Error: Invalid version: 'bargle'
+```
+
+
 ## License
 
 The project is licensed under the Apache License, Version 2.0.
