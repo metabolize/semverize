@@ -18,12 +18,15 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">= 3.9, < 4"
+click = {version = ">= 8, < 9", optional = true}
 semver = ">= 3, < 4"
 packaging = ">= 23.0"
 
+[tool.poetry.extras]
+cli = ["click"]
+
 [tool.poetry.dev-dependencies]
 black = "25.1.0"
-click = "8.1.8"
 coverage = "7.8.0"
 executor = "23.2"
 flake8 = "7.2.0"
@@ -32,6 +35,9 @@ mypy = "1.15.0"
 myst-parser = "3.0.1"
 pytest = "8.3.5"
 pytest-cov = "6.1.1"
+
+[tool.poetry.scripts]
+semverize = "semverize.cli:semverize"
 
 [build-system]
 # Lint requires setuptools.
