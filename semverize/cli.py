@@ -3,7 +3,7 @@ import click
 
 @click.command()
 @click.argument("PEP_440_VERSION")
-def semverize(pep_440_version: str):
+def semverize(pep_440_version: str) -> None:
     """Coerce PEP 440 to SemVer, when possible."""
     from . import pep440_to_semver
     import sys
@@ -17,5 +17,5 @@ def semverize(pep_440_version: str):
     print(semver, end="")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     semverize()

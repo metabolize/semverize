@@ -32,8 +32,5 @@ def test_pep440_to_semver_errors() -> None:
     ):
         assert pep440_to_semver("1.0.0.post1") == "1.0.0+post.1"
 
-    with pytest.raises(
-        ValueError,
-        match="Invalid version: 'bargle'"
-    ):
+    with pytest.raises(ValueError, match="Invalid version: 'bargle'"):
         pep440_to_semver("bargle")
