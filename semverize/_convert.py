@@ -36,7 +36,7 @@ def pep440_to_semver(pep440_version: str) -> str:
             pre = "beta"
         elif in_version.pre[0] == "rc":
             pre = "rc"
-        else: # pragma: no cover
+        else:  # pragma: no cover
             raise ValueError(
                 f"Can't convert PEP 440 version with unknown pre-release component {in_version.pre[0]} to SemVer"
             )
