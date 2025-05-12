@@ -22,7 +22,7 @@ def cli():
 
 @cli.command()
 def install():
-    execute("poetry install --sync")
+    execute("poetry install --sync --extras cli")
 
 
 @cli.command()
